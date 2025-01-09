@@ -29,7 +29,7 @@ var testLong = RandomData.Long(1, 100);
 var testDouble = RandomData.Double(1, 100);
 var testDecimal = RandomData.Decimal(1, 100);
 var testBool = RandomData.Bool();
-var testDate = RandomData.Date();
+var testDate = RandomData.Date(2021, 2024);
 var testDayOfWeek = RandomData.Enumeration<DayOfWeek>();
 
 ```
