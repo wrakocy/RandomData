@@ -19,7 +19,7 @@ PM> Install-Package Wrak.RandomData
 using Wrak.RandomData;
 ```
 
-3. Generate some test data!:
+3. Generate test data:
 
 ```
 
