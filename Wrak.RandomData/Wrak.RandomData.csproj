@@ -11,7 +11,7 @@
     <Product>Wrak.RandomData</Product>
     <Description>A class library for generating simple random test data.</Description>
     <PackageProjectUrl>https://github.com/wrakocy/RandomData</PackageProjectUrl>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReadmeFile></PackageReadmeFile>
     <RepositoryUrl>https://github.com/wrakocy/RandomData</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>netcore;xunit;tests;</PackageTags>
