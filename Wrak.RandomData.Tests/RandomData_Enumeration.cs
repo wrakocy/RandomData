@@ -1,12 +1,12 @@
-namespace Wrak.RandomData.Tests
+namespace Wrak.RandomData.Tests;
+
+public class RandomData_Enumeration
 {
-    public class RandomData_Enumeration
+    [Fact]
+    public void ShouldReturnValidEnumValue()
     {
-        [Fact]
-        public void ShouldReturnValidEnumValue()
-        {
-            var result = RandomData.Enumeration<DayOfWeek>();
-            Assert.IsType<DayOfWeek>(result);
-        }
+        var result = RandomData.Enumeration<DayOfWeek>();
+        Assert.IsType<DayOfWeek>(result);
     }
 }
+

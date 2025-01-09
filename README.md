@@ -3,7 +3,7 @@
 
 # RandomData Middleware Package
 
-A nuget package for generating simple random test data.
+A class library for generating simple random test data.
 
 # Getting Started
 
@@ -13,4 +13,23 @@ A nuget package for generating simple random test data.
 PM> Install-Package Wrak.RandomData
 ```
 
+2. Add the following using statement:
 
+```
+using Wrak.RandomData;
+```
+
+3. Generate some test data!:
+
+```
+
+var testString = RandomData.String(10);
+var testInt = RandomData.Int(1, 100);
+var testLong = RandomData.Long(1, 100);
+var testDouble = RandomData.Double(1, 100);
+var testDecimal = RandomData.Decimal(1, 100);
+var testBool = RandomData.Bool();
+var testDate = RandomData.Date();
+var testDayOfWeek = RandomData.Enumeration<DayOfWeek>();
+
+```
