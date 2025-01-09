@@ -29,7 +29,7 @@ public static partial class RandomData
         return _rnd.Next(minValue, maxValue);
     }
 
-    public static long Int(long minValue = 0, long maxValue = long.MaxValue)
+    public static long Long(long minValue = 0, long maxValue = long.MaxValue)
     {
         return _rnd.NextInt64(minValue, maxValue);
     }

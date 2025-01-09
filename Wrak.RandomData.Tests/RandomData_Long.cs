@@ -7,7 +7,7 @@ public class RandomData_Long
     [InlineData(-50L, 50L)]
     public void ShouldReturnLongWithinRange(long minValue, long maxValue)
     {
-        long result = RandomData.Int(minValue, maxValue);
+        long result = RandomData.Long(minValue, maxValue);
         Assert.InRange(result, minValue, maxValue);
     }
 }
