@@ -4,6 +4,24 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Version>1.0.0</Version>
+    <Authors>William Rakocy</Authors>
+    <Title>A class library for generating simple random test data.</Title>
+    <PackageId>Wrak.RandomData</PackageId>
+    <Product>Wrak.RandomData</Product>
+    <Description>A class library for generating simple random test data.</Description>
+    <PackageProjectUrl>https://github.com/wrakocy/RandomData</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/wrakocy/RandomData</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>netcore;xunit;tests;</PackageTags>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
