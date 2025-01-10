@@ -18,22 +18,22 @@ public static partial class RandomDataExtensions
         return start.AddDays(_rnd.Next(range));
     }
 
-    public static int Int(this IRandomData random, int minValue = 0, int maxValue = int.MaxValue)
+    public static int Int(this IRandomData random, int minValue = 0, int maxValue = 100_000)
     {
         return _rnd.Next(minValue, maxValue);
     }
 
-    public static long Long(this IRandomData random, long minValue = 0, long maxValue = long.MaxValue)
+    public static long Long(this IRandomData random, long minValue = 0, long maxValue = 100_000)
     {
         return _rnd.NextInt64(minValue, maxValue);
     }
 
-    public static double Double(this IRandomData random, double minValue = 0, double maxValue = double.MaxValue)
+    public static double Double(this IRandomData random, double minValue = 0, double maxValue = 100_000)
     {
         return (_rnd.NextDouble() * (maxValue - minValue) + minValue);
     }
 
-    public static decimal Decimal(this IRandomData random, decimal minValue = 0m, decimal maxValue = decimal.MaxValue)
+    public static decimal Decimal(this IRandomData random, decimal minValue = 0m, decimal maxValue = 100_000m)
     {
         return (decimal)(_rnd.NextDouble() * (double)(maxValue - minValue) + (double)minValue);
     }
