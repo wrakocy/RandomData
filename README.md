@@ -19,17 +19,39 @@ PM> Install-Package Wrak.RandomData
 using Wrak.RandomData;
 ```
 
-3. Generate test data:
+3. Generate some random data:
 
 ```
 
-var testString = RandomData.String(10);
-var testInt = RandomData.Int(1, 100);
-var testLong = RandomData.Long(1, 100);
-var testDouble = RandomData.Double(1, 100);
-var testDecimal = RandomData.Decimal(1, 100);
-var testBool = RandomData.Bool();
-var testDate = RandomData.Date(2021, 2024);
-var testDayOfWeek = RandomData.Enumeration<DayOfWeek>();
+var testString = RandomData.As.String(10);
+var testInt = RandomData.As.Int(1, 100);
+var testLong = RandomData.As.Long(1, 100);
+var testDouble = RandomData.As.Double(1, 100);
+var testDecimal = RandomData.As.Decimal(1, 100);
+var testBool = RandomData.As.Bool();
+var testDate = RandomData.As.Date(2021, 2024);
+var testDayOfWeek = RandomData.As.Enumeration<DayOfWeek>();
+
+```
+
+4. Create your own extension methods:
+
+```
+
+public static partial class RandomDataExtensions
+{
+    public static string HappyOrSad(this IRandomData random)
+    {
+        return random.Bool() ? "happy" : "sad";
+    }
+}
+
+...
+
+public void MyMethod()
+{
+    var result = RandomData.As.HappyOrSad();
+    Console.WriteLine($"Feeling {result} today!");
+}
 
 ```

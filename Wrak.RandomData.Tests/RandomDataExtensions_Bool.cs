@@ -1,11 +1,11 @@
 ﻿namespace Wrak.RandomData.Tests;
 
-public class RandomData_Bool
+public class RandomDataExtensions_Bool
 {
     [Fact]
     public void ShouldReturnBoolean()
     {
-        bool result = RandomData.Bool();
+        bool result = RandomData.As.Bool();
         Assert.IsType<bool>(result);
     }
 }
