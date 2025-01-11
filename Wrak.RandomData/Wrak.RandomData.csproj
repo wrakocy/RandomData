@@ -1,10 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFrameworks>net6.0;net7.0;net8.0;net9.0;</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Version>2.1.0</Version>
+    <Version>2.2.0</Version>
     <Authors>William Rakocy</Authors>
     <Title>A class library for generating simple random test data.</Title>
     <PackageId>Wrak.RandomData</PackageId>
