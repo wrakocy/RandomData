@@ -47,7 +47,7 @@ public static partial class RandomDataExtensions
     {
         const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+";
 
-        // Setting minValue to zero will allow this function to potentially return an empty string.
+        // NOTE: Setting minValue to zero will potentially return an empty string.
         length = length ?? _rnd.Next(1, chars.Length);
 
         return new string(Enumerable.Repeat(chars, length.Value).Select(s => s[_rnd.Next(s.Length)]).ToArray());
@@ -60,6 +60,6 @@ public static partial class RandomDataExtensions
 
         var vals = (T[])Enum.GetValues(typeof(T));
         var index = _rnd.Next(vals.Length - 1);
-        return (T)vals[index];
+        return vals[index];
     }
 }
