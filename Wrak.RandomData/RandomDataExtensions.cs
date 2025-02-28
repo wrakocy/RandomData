@@ -11,11 +11,13 @@ public static partial class RandomDataExtensions
 
     public static DateTime Date(this IRandomData random, int minYear = 1995, int maxYear = 2035)
     {
-        var start = new DateTime(minYear, 1, 1);
-        var end = new DateTime(maxYear, 1, 1);
-        var range = (end - start).Days;
+        var startYear = new DateTime(minYear, 1, 1);
+        var endYear = new DateTime(maxYear, 1, 1);
+        var dateRange = (endYear - startYear).Days;
+        var randomDate = startYear.AddDays(_rnd.Next(dateRange));
+        var randomTime = new TimeSpan(_rnd.Next(0, 24), _rnd.Next(0, 60), _rnd.Next(0, 60));
 
-        return start.AddDays(_rnd.Next(range));
+        return randomDate.Add(randomTime);
     }
 
     public static int Int(this IRandomData random, int minValue = 0, int maxValue = 100_000)
