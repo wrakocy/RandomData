@@ -29,7 +29,10 @@ var testLong = RandomData.As.Long(1, 100);
 var testDouble = RandomData.As.Double(1, 100);
 var testDecimal = RandomData.As.Decimal(1, 100);
 var testBool = RandomData.As.Bool();
-var testDate = RandomData.As.Date(2021, 2024);
+var testDateTime = RandomData.As.DateTime(2021, 2024);
+var testDateOnly = RandomData.As.DateOnly(2021, 2024);
+var testTimeOnly = RandomData.As.TimeOnly(1, 23);
+var testTimeSpan = RandomData.As.TimeSpan();
 var testDayOfWeek = RandomData.As.Enumeration<DayOfWeek>();
 
 ```
