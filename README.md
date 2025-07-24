@@ -45,7 +45,7 @@ public static partial class RandomDataExtensions
 {
     public static string HappyOrSad(this IRandomData random)
     {
-        return Random.As.Bool() ? "happy" : "sad";
+        return RandomData.As.Bool() ? "happy" : "sad";
     }
 }
 
