@@ -125,7 +125,7 @@ public static partial class RandomDataExtensions
             throw new ArgumentException("T must be an enum");
 
         var vals = (T[])Enum.GetValues(typeof(T));
-        var index = _rnd.Next(vals.Length - 1);
+        var index = _rnd.Next(vals.Length);
         return vals[index];
     }
 }
