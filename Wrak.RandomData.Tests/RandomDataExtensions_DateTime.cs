@@ -12,7 +12,7 @@ public class RandomDataExtensions_DateTime
     }
 
     [Fact]
-    public void ShouldReturnDateTimeWithoutDefaultTime()
+    public void ShouldReturnAtLeastOneDateTimeWithoutDefaultTime()
     {
         for (int i = 0; i < 100; i++)
         {
@@ -20,6 +20,6 @@ public class RandomDataExtensions_DateTime
             if (dt.TimeOfDay > TimeSpan.Zero) return;
         }
 
-        Assert.Fail("All generated date times had a default time.");
+        Assert.Fail("All generated date times had default times.");
     }
 }

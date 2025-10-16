@@ -27,6 +27,21 @@ public static partial class RandomDataExtensions
         return randomDate.Add(randomTime);
     }
 
+    public static DateTimeOffset DateTimeOffset(this IRandomData _, int minYear = 1995, int maxYear = 2035)
+    {
+        var dt = DateTime(_, minYear, maxYear);
+
+        // Generate offset in whole minutes within valid range (-14:00 to +14:00)
+        int minOffsetMinutes = (int)System.TimeSpan.FromHours(-14).TotalMinutes;
+        int maxOffsetMinutes = (int)System.TimeSpan.FromHours(14).TotalMinutes;
+        int offsetMinutes = _rnd.Next(minOffsetMinutes, maxOffsetMinutes + 1);
+
+        // Ensure offset is in whole minutes
+        var offset = System.TimeSpan.FromMinutes(offsetMinutes);
+
+        return new DateTimeOffset(dt, offset);
+    }
+
     public static DateOnly DateOnly(this IRandomData _, int minYear = 1995, int maxYear = 2035)
     {
         if (minYear < System.DateOnly.MinValue.Year)
