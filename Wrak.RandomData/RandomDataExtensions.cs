@@ -134,12 +134,12 @@ public static partial class RandomDataExtensions
         return new string(Enumerable.Repeat(chars, length.Value).Select(s => s[_rnd.Next(s.Length)]).ToArray());
     }
 
-    public static T Enumeration<T>(this IRandomData _) where T : struct, IConvertible
+    public static T Enum<T>(this IRandomData _) where T : struct, IConvertible
     {
         if (!typeof(T).IsEnum)
             throw new ArgumentException("T must be an enum");
 
-        var vals = (T[])Enum.GetValues(typeof(T));
+        var vals = (T[])System.Enum.GetValues(typeof(T));
         var index = _rnd.Next(vals.Length);
         return vals[index];
     }

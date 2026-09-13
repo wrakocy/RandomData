@@ -33,7 +33,7 @@ var testDateTime = RandomData.As.DateTime(2021, 2024);
 var testDateOnly = RandomData.As.DateOnly(2021, 2024);
 var testTimeOnly = RandomData.As.TimeOnly(1, 23);
 var testTimeSpan = RandomData.As.TimeSpan();
-var testDayOfWeek = RandomData.As.Enumeration<DayOfWeek>();
+var testDayOfWeek = RandomData.As.Enum<DayOfWeek>();
 
 ```
 
