@@ -12,11 +12,11 @@ This repo bumps `<Version>` in `Wrak.RandomData.csproj` for every public-facing 
 - **Always get the user's explicit confirmation of the exact X.Y.Z version before tagging** — never assume or reuse a previously-suggested number.
 - **Before tagging, verify the tree is clean** — run in order and stop (fix, or ask the user) if any step fails or changes files:
   ```
-  dotnet format Wrak.RandomData.sln --verify-no-changes
-  dotnet build Wrak.RandomData.sln
+  dotnet format Wrak.RandomData.slnx --verify-no-changes
+  dotnet build Wrak.RandomData.slnx
   dotnet test Wrak.RandomData.Tests/Wrak.RandomData.Tests.csproj
   ```
-  If format check fails, run `dotnet format Wrak.RandomData.sln` to apply fixes, re-run build/test, and get those changes committed first.
+  If format check fails, run `dotnet format Wrak.RandomData.slnx` to apply fixes, re-run build/test, and get those changes committed first.
 - Commit the version bump, then tag and push to release — only after the user's explicit confirmation:
   ```
   git tag -a vX.Y.Z -m "vX.Y.Z"

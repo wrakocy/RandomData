@@ -49,10 +49,10 @@ jobs:
           dotnet-version: "9.0.x"
 
       - name: Build
-        run: dotnet build Wrak.RandomData.sln -c Release
+        run: dotnet build Wrak.RandomData.slnx -c Release
 
       - name: Pack
-        run: dotnet pack Wrak.RandomData.sln -c Release -p:Version=${{ steps.version.outputs.version }} -o artifacts
+        run: dotnet pack Wrak.RandomData.slnx -c Release -p:Version=${{ steps.version.outputs.version }} -o artifacts
 
       - name: NuGet login (OIDC -> short-lived API key)
         uses: NuGet/login@v1

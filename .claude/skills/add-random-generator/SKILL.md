@@ -24,6 +24,6 @@ Follow every step — the library's public surface, its tests, and the NuGet ver
 
 5. **Build and run tests** before finishing:
    ```
-   dotnet build Wrak.RandomData.sln
+   dotnet build Wrak.RandomData.slnx
    dotnet test Wrak.RandomData.Tests/Wrak.RandomData.Tests.csproj
    ```

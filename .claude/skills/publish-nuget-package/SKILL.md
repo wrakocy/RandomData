@@ -18,12 +18,12 @@ This repo bumps `<Version>` in `Wrak.RandomData.csproj` for every public-facing 
 4. **Update `<Version>`** in [Wrak.RandomData/Wrak.RandomData.csproj](../../../Wrak.RandomData/Wrak.RandomData.csproj) to match, if it isn't already there.
 5. **Verify the tree is clean before releasing** — run these in order and stop (and fix, or ask the user) if any of them fail or change files:
    ```
-   dotnet format Wrak.RandomData.sln --verify-no-changes
-   dotnet build Wrak.RandomData.sln
+   dotnet format Wrak.RandomData.slnx --verify-no-changes
+   dotnet build Wrak.RandomData.slnx
    dotnet test Wrak.RandomData.Tests/Wrak.RandomData.Tests.csproj
    ```
-   If `dotnet format --verify-no-changes` fails, run `dotnet format Wrak.RandomData.sln` to apply fixes, re-run build and test, and get those formatting changes committed before continuing.
-   You can also sanity-check the package locally without publishing: `dotnet pack Wrak.RandomData.sln -c Release -p:Version=X.Y.Z -o artifacts`.
+   If `dotnet format --verify-no-changes` fails, run `dotnet format Wrak.RandomData.slnx` to apply fixes, re-run build and test, and get those formatting changes committed before continuing.
+   You can also sanity-check the package locally without publishing: `dotnet pack Wrak.RandomData.slnx -c Release -p:Version=X.Y.Z -o artifacts`.
 6. **Commit** the version bump (and any formatting fixes) if not already committed.
 7. **Tag and push** — this is the step that triggers the publish workflow, so only do it after the user's explicit confirmation from step 3:
    ```

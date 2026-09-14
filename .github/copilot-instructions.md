@@ -5,7 +5,7 @@ Tiny, zero-dependency .NET class library that generates random test data via ext
 ## Build & test
 
 ```
-dotnet build Wrak.RandomData.sln
+dotnet build Wrak.RandomData.slnx
 dotnet test Wrak.RandomData.Tests/Wrak.RandomData.Tests.csproj
 ```
 

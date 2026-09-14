@@ -23,13 +23,13 @@ jobs:
           dotnet-version: "9.0.x"
 
       - name: Restore
-        run: dotnet restore Wrak.RandomData.sln
+        run: dotnet restore Wrak.RandomData.slnx
 
       - name: Verify formatting
-        run: dotnet format Wrak.RandomData.sln --verify-no-changes --no-restore
+        run: dotnet format Wrak.RandomData.slnx --verify-no-changes --no-restore
 
       - name: Build
-        run: dotnet build Wrak.RandomData.sln -c Release --no-restore
+        run: dotnet build Wrak.RandomData.slnx -c Release --no-restore
 
       - name: Test
         run: dotnet test Wrak.RandomData.Tests/Wrak.RandomData.Tests.csproj -c Release --no-build

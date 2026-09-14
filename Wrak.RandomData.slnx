@@ -1,0 +1,15 @@
+<Solution>
+  <Folder Name="/.docs/">
+    <File Path="README.md" />
+  </Folder>
+  <Folder Name="/.github/">
+    <File Path=".github/workflows/build.yml" />
+    <File Path=".github/workflows/publish.yml" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="Wrak.RandomData/Wrak.RandomData.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="Wrak.RandomData.Tests/Wrak.RandomData.Tests.csproj" />
+  </Folder>
+</Solution>
