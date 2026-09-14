@@ -14,7 +14,11 @@ permissions:
   contents: read
 
 jobs:
+  build:
+    uses: ./.github/workflows/build.yml
+
   publish:
+    needs: build
     runs-on: ubuntu-latest
     # Bound to "release" for NUGET_USER (an environment secret, not a repo
     # secret) — required reviewers on this environment can still be added
@@ -44,14 +48,8 @@ jobs:
         with:
           dotnet-version: "9.0.x"
 
-      - name: Verify formatting
-        run: dotnet format Wrak.RandomData.sln --verify-no-changes
-
       - name: Build
         run: dotnet build Wrak.RandomData.sln -c Release
-
-      - name: Test
-        run: dotnet test Wrak.RandomData.Tests/Wrak.RandomData.Tests.csproj -c Release --no-build
 
       - name: Pack
         run: dotnet pack Wrak.RandomData.sln -c Release -p:Version=${{ steps.version.outputs.version }} -o artifacts
