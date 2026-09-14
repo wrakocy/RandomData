@@ -16,6 +16,10 @@ permissions:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    # Bound to "release" for NUGET_USER (an environment secret, not a repo
+    # secret) — required reviewers on this environment can still be added
+    # under repo Settings > Environments for an approval gate.
+    environment: release
     permissions:
       contents: read
       id-token: write # required for NuGet Trusted Publishing (OIDC)
