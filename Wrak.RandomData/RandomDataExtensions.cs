@@ -119,6 +119,11 @@ public static partial class RandomDataExtensions
         return (decimal)(_rnd.NextDouble() * (double)(maxValue - minValue) + (double)minValue);
     }
 
+    public static float Float(this IRandomData random, float minValue = 0f, float maxValue = 100_000f)
+    {
+        return (float)random.Double(minValue, maxValue);
+    }
+
     public static char Char(this IRandomData random)
     {
         return random.String(1)[0];

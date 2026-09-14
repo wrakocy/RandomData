@@ -27,6 +27,7 @@ var testString = RandomData.As.String(10);
 var testInt = RandomData.As.Int(1, 100);
 var testLong = RandomData.As.Long(1, 100);
 var testDouble = RandomData.As.Double(1, 100);
+var testFloat = RandomData.As.Float(1, 100);
 var testDecimal = RandomData.As.Decimal(1, 100);
 var testBool = RandomData.As.Bool();
 var testDateTime = RandomData.As.DateTime(2021, 2024);
