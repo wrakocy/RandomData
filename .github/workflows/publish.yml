@@ -16,10 +16,6 @@ permissions:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    # Optional extra gate: configure a "release" environment with required
-    # reviewers under repo Settings > Environments to force a human approval
-    # click here before the push step runs.
-    environment: release
     permissions:
       contents: read
       id-token: write # required for NuGet Trusted Publishing (OIDC)
