@@ -1,5 +1,6 @@
 [![NuGet](https://img.shields.io/nuget/v/Wrak.RandomData.svg)](https://www.nuget.org/packages/Wrak.RandomData) [![NuGet](https://img.shields.io/nuget/dt/Wrak.RandomData.svg)](https://www.nuget.org/packages/Wrak.RandomData)
 [![Build Status](https://wrakocy.visualstudio.com/RandomData/_apis/build/status/wrakocy.RandomData?branchName=main)](https://wrakocy.visualstudio.com/RandomData/_build/latest?definitionId=3&branchName=main)
+[![Publish to NuGet](https://github.com/wrakocy/RandomData/actions/workflows/publish.yml/badge.svg)](https://github.com/wrakocy/RandomData/actions/workflows/publish.yml)
 
 # RandomData Package
 
